@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height:100vh;
+  background: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?cs=srgb&dl=pexels-felix-mittermeier-956999.jpg&fm=jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 30vw;
+  height: 55vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  border-left:1px solid rgba(51, 51, 51, 0.5);
+  border-top:1px solid rgba(58, 58, 58, 0.5);
+}
+
+.calc {
+  width: 100%;
+  height: 100%;
+}
+
+.calc .display {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0px solid;
+  color: white;
+  font-size: 50px;
+  text-align: right;
+}
+
+input:focus{
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons span {
+  place-items: center;
+  width: 7.5vw;
+  height: 7.5vh;
+  color: white;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-left:1px solid rgba(51, 51, 51, 0.25);
+  border-top:1px solid rgba(58, 58, 58, 0.25);
+}
+
+.btn p {
+  color: white;
+  font-weight: 300;
+}
