@@ -7,16 +7,17 @@
 .container {
   width: 100%;
   height:100vh;
-  background: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?cs=srgb&dl=pexels-felix-mittermeier-956999.jpg&fm=jpg");
-  background-size: cover;
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .box {
-  width: 30vw;
-  height: 55vh;
+  width: 400px;
+  height: 700px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   border-left:1px solid rgba(51, 51, 51, 0.5);
@@ -29,8 +30,8 @@
 }
 
 .calc .display {
-  width: 100%;
-  height: 30%;
+  width: 397px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,10 +56,15 @@ input:focus{
   justify-content: center;
 }
 
+
+.equal {
+  width: 200%!important;
+}
+
 .buttons span {
   place-items: center;
-  width: 7.5vw;
-  height: 7.5vh;
+  width: calc(100px - 4px);
+  height: calc(100px - 2px);
   color: white;
   font-weight: 600;
 
