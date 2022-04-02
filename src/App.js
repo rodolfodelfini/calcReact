@@ -1,5 +1,7 @@
 //import Head from 'next/head'
 import React, { useState } from 'react';
+import Tilt from 'react-tilt'
+
 import './App.css';
 
 
@@ -8,15 +10,15 @@ function App() {
   const [equation, setEquation] = useState(0);
 
   function calculator(item){
-    if(typeof item == 'number') {
-      if(equation == 0) {
+    if(typeof item === 'number') {
+      if(equation === 0) {
         setEquation(item)
       }else {
         setEquation(''+equation+item)
       }
     }
 
-    if(item == '*' ||  item == '/' ||  item == '-'  ||  item == '+') {
+    if(item === '*' ||  item === '/' ||  item === '-'  ||  item === '+' || item === '%') {
       setEquation(equation+item)
     }
 
@@ -25,14 +27,16 @@ function App() {
       setEquation(0)
     }
 
-    if(item == '=') {
+    if(item === '=') {
       setEquation(eval(equation))
     }
   }
 
   return (
       <div className='container'>
+            <Tilt className="Tilt" options={{ max : 25 }}>
           <div className='box'>
+
             <div className='calc'>
               <input className='display' type='text' value={equation} />
               <div  className='buttons'>
@@ -62,6 +66,7 @@ function App() {
               </div>
             </div>
           </div>
+          </Tilt>
       </div>
   );
 }
